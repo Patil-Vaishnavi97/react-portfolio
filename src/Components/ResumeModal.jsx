@@ -1,5 +1,17 @@
 import React from 'react';
-import { FaDownload, FaTimes, FaPrint, FaBriefcase, FaGraduationCap, FaCode, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa';
+import {
+  FaDownload,
+  FaTimes,
+  FaPrint,
+  FaBriefcase,
+  FaGraduationCap,
+  FaCode,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+  FaLinkedin,
+  FaLaptopCode
+} from 'react-icons/fa';
 import './ResumeModal.scss';
 
 const ResumeModal = ({ isOpen, onClose }) => {
@@ -15,8 +27,16 @@ const ResumeModal = ({ isOpen, onClose }) => {
         <div className="resume-modal-header">
           <h3>Resume Preview</h3>
           <div className="resume-modal-actions">
+            <a
+              href="/Vaishnavi_Patil_Resume.pdf"
+              download="Vaishnavi_Patil_Resume.pdf"
+              className="action-btn download-pdf-btn"
+              title="Download Original PDF"
+            >
+              <FaDownload /> Download PDF
+            </a>
             <button className="action-btn print-btn" onClick={handlePrint} title="Print or Save as PDF">
-              <FaPrint /> Print / Save PDF
+              <FaPrint /> Print / Save
             </button>
             <button className="action-btn close-btn" onClick={onClose} title="Close">
               <FaTimes />
@@ -31,11 +51,13 @@ const ResumeModal = ({ isOpen, onClose }) => {
             <h2 className="title">Java Full Stack Developer</h2>
             <div className="contact-info">
               <span><FaPhoneAlt /> +91-9673921531</span>
-              <span><FaEnvelope /> vaishup7832@gmail.com</span>
+              <span><FaEnvelope /> Email: vaishup7832@gmail.com</span>
               <a href="https://www.linkedin.com/in/vaishnavi-patil-6a9283334/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin /> LinkedIn
               </a>
-              <span><FaMapMarkerAlt /> Pune, Maharashtra, India</span>
+              <a href="https://myreact-portfolio-rosy.vercel.app" target="_blank" rel="noopener noreferrer">
+                <FaLaptopCode /> Portfolio
+              </a>
             </div>
           </header>
 
@@ -99,9 +121,9 @@ const ResumeModal = ({ isOpen, onClose }) => {
             <h3 className="section-title"><FaCode /> Technical Skills</h3>
             <div className="skills-category-list">
               <p><strong>Programming Languages:</strong> Core Java, JavaScript (ES6+), SQL</p>
-              <p><strong>Java Concepts:</strong> OOP Concepts, Exception Handling, Collections Framework</p>
+              <p><strong>Java Concepts:</strong> OOP Concepts, Exception Handling, Collections (Fundamentals)</p>
               <p><strong>Frontend Technologies:</strong> React.js, React Hooks, React Router, HTML5, CSS3, SCSS</p>
-              <p><strong>Backend Knowledge:</strong> Spring Boot, REST APIs, Microservices</p>
+              <p><strong>Backend Knowledge:</strong> Spring Boot, REST APIs, Microservices (Basic Knowledge)</p>
               <p><strong>Development Concepts:</strong> Reusable Components, Responsive Design, Form Validation, Error Handling, JWT Authentication</p>
               <p><strong>Tools:</strong> Git, GitHub, Postman, VS Code, IntelliJ IDEA</p>
             </div>

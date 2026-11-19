@@ -59,6 +59,17 @@
       border: none;
       transition: all 0.2s ease;
 
+      &.download-pdf-btn {
+        background: #10b981;
+        color: #ffffff;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        &:hover {
+          background: #059669;
+          box-shadow: 0 6px 18px rgba(16, 185, 129, 0.45);
+        }
+      }
+
       &.print-btn {
         background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
         color: #ffffff;
