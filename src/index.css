@@ -1,0 +1,169 @@
+:root {
+  /* ===============================
+     LIGHT THEME (Default - Picto Style)
+     =============================== */
+  --bg-canvas: #f1f5f9;
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(224, 231, 255, 0.7) 0%, transparent 40%),
+                  radial-gradient(circle at 90% 80%, rgba(237, 233, 254, 0.8) 0%, transparent 45%),
+                  #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f8fafc;
+  --bg-card-hover: #ffffff;
+  --bg-photo-frame: #f1f5f9;
+  --navbar-bg: rgba(255, 255, 255, 0.88);
+  --navbar-border: rgba(226, 232, 240, 0.8);
+  --footer-bg: #ffffff;
+  --footer-border: rgba(226, 232, 240, 0.9);
+
+  --primary: #7c3aed; /* Vibrant Purple/Violet */
+  --primary-hover: #6d28d9;
+  --primary-light: #f5f3ff;
+  --primary-glow: rgba(124, 58, 237, 0.25);
+  --primary-border: #ddd6fe;
+
+  --accent-pink: #ec4899;
+  --accent-indigo: #4f46e5;
+  --accent-cyan: #0284c7;
+  --accent-emerald: #059669;
+
+  --text-main: #0f172a; /* Slate 900 */
+  --text-secondary: #334155; /* Slate 700 */
+  --text-muted: #64748b; /* Slate 500 */
+  --text-light: #94a3b8;
+
+  --border-subtle: #e2e8f0;
+  --border-card: rgba(226, 232, 240, 0.9);
+  --border-focus: #c4b5fd;
+
+  --tag-bg: #f1f5f9;
+  --tag-text: #334155;
+  --tag-border: #e2e8f0;
+
+  --card-inner-bg: #f8fafc;
+  --card-inner-border: #e2e8f0;
+
+  --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  --gradient-pink-purple: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+  --gradient-badge: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+  --gradient-cta: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+
+  --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 10px 25px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 20px 60px rgba(15, 23, 42, 0.06);
+  --shadow-card: 0 15px 45px rgba(15, 23, 42, 0.05);
+  --shadow-purple: 0 10px 25px rgba(124, 58, 237, 0.35);
+}
+
+/* ===============================
+   DARK THEME
+   =============================== */
+:root.dark,
+html.dark {
+  --bg-canvas: #0a0e1a;
+  --bg-gradient: radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.14) 0%, transparent 45%),
+                  radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.12) 0%, transparent 50%),
+                  #0a0e1a;
+  --bg-card: #121829;
+  --bg-card-subtle: #182035;
+  --bg-card-hover: #1b243b;
+  --bg-photo-frame: #182035;
+  --navbar-bg: rgba(18, 24, 41, 0.88);
+  --navbar-border: rgba(255, 255, 255, 0.08);
+  --footer-bg: #0c111f;
+  --footer-border: rgba(255, 255, 255, 0.08);
+
+  --primary: #a855f7; /* Brighter Purple for Dark Mode */
+  --primary-hover: #c084fc;
+  --primary-light: rgba(168, 85, 247, 0.14);
+  --primary-glow: rgba(168, 85, 247, 0.35);
+  --primary-border: rgba(168, 85, 247, 0.3);
+
+  --accent-pink: #f472b6;
+  --accent-indigo: #818cf8;
+  --accent-cyan: #38bdf8;
+  --accent-emerald: #34d399;
+
+  --text-main: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+
+  --border-subtle: rgba(255, 255, 255, 0.09);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --border-focus: #a855f7;
+
+  --tag-bg: rgba(255, 255, 255, 0.06);
+  --tag-text: #e2e8f0;
+  --tag-border: rgba(255, 255, 255, 0.1);
+
+  --card-inner-bg: rgba(255, 255, 255, 0.03);
+  --card-inner-border: rgba(255, 255, 255, 0.07);
+
+  --gradient-purple: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  --gradient-pink-purple: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+  --gradient-badge: linear-gradient(135deg, #ec4899 0%, #9333ea 100%);
+  --gradient-cta: linear-gradient(135deg, #182035 0%, #2e1065 100%);
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 15px 45px rgba(0, 0, 0, 0.35);
+  --shadow-purple: 0 10px 25px rgba(168, 85, 247, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg-canvas);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Selection */
+::selection {
+  background: rgba(124, 58, 237, 0.25);
+  color: var(--primary);
+}

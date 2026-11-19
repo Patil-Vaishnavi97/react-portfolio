@@ -1,0 +1,270 @@
+.resume-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.resume-modal-container {
+  background: #ffffff;
+  color: #1e293b;
+  width: 100%;
+  max-width: 850px;
+  max-height: 90vh;
+  border-radius: 24px;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+  animation: modalFadeIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-modal-header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  color: #0f172a;
+  padding: 1rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  border-bottom: 1px solid #e2e8f0;
+
+  h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #7c3aed;
+  }
+
+  .resume-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+
+      &.print-btn {
+        background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        &:hover {
+          box-shadow: 0 6px 18px rgba(124, 58, 237, 0.45);
+        }
+      }
+
+      &.close-btn {
+        background: #f1f5f9;
+        color: #475569;
+        &:hover {
+          background: #fee2e2;
+          color: #dc2626;
+        }
+      }
+    }
+  }
+}
+
+.resume-paper {
+  padding: 2.5rem 3rem;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  color: #1f2937;
+  line-height: 1.5;
+  background: #fff;
+
+  .resume-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    .name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #7c3aed;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      color: #4b5563;
+
+      span, a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        color: #4b5563;
+        text-decoration: none;
+
+        svg {
+          color: #7c3aed;
+        }
+      }
+
+      a:hover {
+        color: #7c3aed;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .divider {
+    border: 0;
+    height: 1.5px;
+    background: #e5e7eb;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .resume-section {
+    margin-bottom: 1.75rem;
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      border-bottom: 2px solid #7c3aed;
+      padding-bottom: 0.35rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      svg {
+        color: #7c3aed;
+      }
+    }
+
+    .summary-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #374151;
+      text-align: justify;
+    }
+
+    .experience-item, .project-item, .education-item {
+      margin-bottom: 1.25rem;
+
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.5rem;
+
+        .role, .project-title, .degree {
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: #0f172a;
+        }
+
+        .company, .institution {
+          display: block;
+          font-size: 0.925rem;
+          color: #7c3aed;
+          font-weight: 700;
+        }
+
+        .date-location {
+          text-align: right;
+          font-size: 0.875rem;
+          color: #6b7280;
+
+          .date, .grad-year {
+            font-weight: 700;
+            color: #374151;
+            display: block;
+          }
+
+          .cgpa {
+            color: #7c3aed;
+          }
+        }
+      }
+
+      .bullet-points {
+        list-style-type: disc;
+        padding-left: 1.25rem;
+        font-size: 0.9rem;
+        color: #374151;
+        line-height: 1.6;
+
+        li {
+          margin-bottom: 0.35rem;
+        }
+      }
+    }
+
+    .skills-category-list {
+      font-size: 0.925rem;
+      line-height: 1.8;
+      color: #374151;
+
+      p {
+        margin-bottom: 0.4rem;
+        strong {
+          color: #0f172a;
+        }
+      }
+    }
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-printable-area, #resume-printable-area * {
+    visibility: visible;
+  }
+  #resume-printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .resume-modal-header {
+    display: none !important;
+  }
+}
